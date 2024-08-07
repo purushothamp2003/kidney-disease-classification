@@ -212,3 +212,53 @@ RuntimeError: Can't decrement id ref count (unable to extend file properly)
 [2024-08-07 17:01:26,775: INFO: common: created directory at: artifacts]
 [2024-08-07 17:01:50,825: INFO: common: json file saved at: scores.json]
 [2024-08-07 17:01:50,831: INFO: stage_04_model_evaluation:  >>> stage Model Evaluating stage completed <<<]
+[2024-08-08 01:25:05,981: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2024-08-08 01:25:05,981: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-08-08 01:25:11,963: INFO: _internal: 127.0.0.1 - - [08/Aug/2024 01:25:11] "GET / HTTP/1.1" 200 -]
+[2024-08-08 01:26:11,312: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\PURUSHOTHAM P\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\PURUSHOTHAM P\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\PURUSHOTHAM P\anaconda3\envs\kidney\lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\PURUSHOTHAM P\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\PURUSHOTHAM P\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\PURUSHOTHAM P\anaconda3\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "c:\users\purushotham p\desktop\kidney-disease-classification\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\PURUSHOTHAM P\anaconda3\envs\kidney\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\PURUSHOTHAM P\anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\PURUSHOTHAM P\anaconda3\envs\kidney\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-08-08 01:26:11,320: INFO: _internal: 127.0.0.1 - - [08/Aug/2024 01:26:11] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-08-08 01:28:10,646: INFO: _internal: 127.0.0.1 - - [08/Aug/2024 01:28:10] "GET / HTTP/1.1" 200 -]
+[2024-08-08 01:28:12,164: INFO: _internal: 127.0.0.1 - - [08/Aug/2024 01:28:12] "GET / HTTP/1.1" 200 -]
+[2024-08-08 01:32:12,154: INFO: _internal: 127.0.0.1 - - [08/Aug/2024 01:32:12] "GET / HTTP/1.1" 200 -]
+[2024-08-08 01:32:13,574: INFO: _internal: 127.0.0.1 - - [08/Aug/2024 01:32:13] "GET / HTTP/1.1" 200 -]
+[2024-08-08 01:34:24,724: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2024-08-08 01:34:24,724: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-08-08 01:34:28,300: INFO: _internal: 127.0.0.1 - - [08/Aug/2024 01:34:28] "GET / HTTP/1.1" 200 -]
+[2024-08-08 01:45:54,064: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2024-08-08 01:45:54,064: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-08-08 01:46:21,979: INFO: _internal: 127.0.0.1 - - [08/Aug/2024 01:46:21] "GET / HTTP/1.1" 200 -]
+[2024-08-08 01:46:48,636: INFO: _internal: 127.0.0.1 - - [08/Aug/2024 01:46:48] "GET / HTTP/1.1" 200 -]
+[2024-08-08 01:48:21,657: INFO: _internal: 127.0.0.1 - - [08/Aug/2024 01:48:21] "POST /predict HTTP/1.1" 200 -]
+[2024-08-08 01:49:44,152: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2024-08-08 01:49:44,152: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-08-08 01:50:02,459: INFO: _internal: 127.0.0.1 - - [08/Aug/2024 01:50:02] "GET / HTTP/1.1" 200 -]
+[2024-08-08 01:50:17,969: INFO: _internal: 127.0.0.1 - - [08/Aug/2024 01:50:17] "POST /predict HTTP/1.1" 200 -]
+[2024-08-08 01:50:56,791: INFO: _internal: 127.0.0.1 - - [08/Aug/2024 01:50:56] "GET / HTTP/1.1" 200 -]
